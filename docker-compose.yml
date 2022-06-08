@@ -16,15 +16,14 @@ services:
         networks:
             - laravel
 
-    db:
-        image: mysql:5.7.29
+    db_cbmse_prova:
+        image: "mysql:5.7"
         container_name: cbmseprova_db
         restart: unless-stopped
         ports:
-            - "9306:3306"
+            - "3306:3306"
         environment:
             MYSQL_DATABASE: ${DB_DATABASE}
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
             MYSQL_PASSWORD: ${DB_PASSWORD}
             MYSQL_USER: ${DB_USERNAME}
             SERVICE_TAGS: dev
@@ -33,6 +32,7 @@ services:
             - laravel
         volumes:
             - /docker-compose/mysql:/var/lib/mysql
+            - ./:/var/www
 
     nginx:
         image: nginx:1.17-alpine
