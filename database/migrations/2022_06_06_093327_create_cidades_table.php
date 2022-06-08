@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('cidades', function (Blueprint $table) {
             $table->unsignedInteger('ibge')->primary();
             $table->string('nome', 150);
-            $table->string('estado_cod');
+            $table->integer('estado_cod');
             $table->timestamps();
         });
     }

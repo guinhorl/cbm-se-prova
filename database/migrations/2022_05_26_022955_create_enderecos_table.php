@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('logradouro');
             $table->string('complemento')->nullable();
             $table->string('bairro');
-            $table->string('cidade_ibge');
+            $table->unsignedInteger('cidade_ibge');
             $table->timestamps();
         });
     }
