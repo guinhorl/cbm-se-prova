@@ -66,7 +66,6 @@ class EnderecoService implements IEnderecoService
     public function vincularCidadeEstadoEndereco(array $data)
     {
         try {
-            //dd($data);
             $do_endereco = [
                 'cep' => $data['cep'],
                 'logradouro' => $data['logradouro'],
