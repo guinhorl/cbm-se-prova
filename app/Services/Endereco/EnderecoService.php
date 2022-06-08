@@ -35,7 +35,6 @@ class EnderecoService implements IEnderecoService
     public function index()
     {
         try {
-            //$enderecos = Endereco::all();
             $enderecos = Endereco::query()->with('cidade.estado')->get()->all();
             return view('enderecos.index', ['enderecos' => $enderecos]);
         } catch (Exception $e){

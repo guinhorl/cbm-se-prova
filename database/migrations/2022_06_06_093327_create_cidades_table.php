@@ -17,7 +17,6 @@ return new class extends Migration
             $table->unsignedInteger('ibge')->primary();
             $table->string('nome', 150);
             $table->string('estado_cod');
-            $table->foreign('estado_cod', 'fk_cidades_estado_cod')->references('estado_cod')->on('estados')->onUpdate('RESTRICT')->onDelete('RESTRICT');
             $table->timestamps();
         });
     }

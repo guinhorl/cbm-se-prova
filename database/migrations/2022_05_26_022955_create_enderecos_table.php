@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('complemento')->nullable();
             $table->string('bairro');
             $table->string('cidade_ibge');
-            $table->foreign('cidade_ibge', 'fk_enderecos_cidade_ibge')->references('ibge')->on('cidades')->onUpdate('RESTRICT')->onDelete('RESTRICT');
             $table->timestamps();
         });
     }
