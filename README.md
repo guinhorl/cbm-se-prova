@@ -5,8 +5,8 @@ Como executar
 
 As configurações do banco consta no .env.example.
 
-Para rodar as migrations descomente a linha DB_HOST=127.0.0.1 e comente a linha DB_HOST=db_cbmse_prova do .env.example
-depois desfaça esse procedimento.
+Para rodar as migrations descomente a linha DB_HOST=127.0.0.1, e comente a linha DB_HOST=db_cbmse_prova do .env.example
+depois desfaça esse procedimento. Não sei porquê, mas só é possivel rodar as migrations em localhost.
 
 
 ###Autor do projeto Wagner
